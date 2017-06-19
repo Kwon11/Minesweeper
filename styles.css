@@ -1,3 +1,13 @@
 body {
+  background-color: white;
+}
+
+.BoardRow {
   background-color: grey;
+}
+
+.Cell {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
 }

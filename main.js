@@ -38,6 +38,10 @@ function newGame () {
   renderBoard();
 }
 
+function handleLeftClick(element) {
+  console.log('clicked', element);
+}
+
 function generateBoard () {
   //return the matrix
   var newBoard = [];
@@ -105,9 +109,27 @@ function randomCoordinates() {
 
 function renderBoard () {
   console.log('render', currentBoard.board);
+  
+  let board = document.getElementById("board")
+  for (let y = 0; y < currentBoard.settings.height; y++) {
+    let tr = document.createElement('tr');
+    tr.setAttribute('id', y)
+    tr.setAttribute('class', 'BoardRow')
+    board.appendChild(tr);
+    for (let x = 0; x < currentBoard.settings.width; x++) {
+      let td = document.createElement('td');
+      var coordinateId = 'y' + y + 'x' + x;
+      td.setAttribute('id', coordinateId);
+      td.setAttribute('class', 'Cell');
+      td.setAttribute('onclick', 'handleLeftClick(this)')
+      tr.appendChild(td);
+    }
+  }
+
 }
 
 gameSizeClick('small');
+newGame();
 //generate a board
 //square options
   //bomb
