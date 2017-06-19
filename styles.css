@@ -10,4 +10,13 @@ body {
   width: 35px;
   height: 35px;
   border: 1px solid black;
+  text-align: center;
+}
+
+.Flipped {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: #BDBDBD;
 }
