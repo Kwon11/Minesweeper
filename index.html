@@ -4,9 +4,30 @@
   <title>Minesweeper practice</title>
   <meta charset="UTF-8">
   <script src="./main.js"></script>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+
+  <table>
+    <tr>
+      <th>Game Clock</th>
+      <th onclick="newGame()"><button>New Game</button></th>
+      <th>Board Size</th>
+    </tr>
+    <tr>
+      <td id="timer">00:00</td>
+      <td></td>
+      <td>
+        <button onclick="gameSizeClick('small')">small</button>
+        <button onclick="gameSizeClick('medium')">medium</button>
+        <button onclick="gameSizeClick('large')">large</button>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+  </table>
 </body>
 
 </html>
