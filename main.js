@@ -111,6 +111,9 @@ function renderBoard () {
   console.log('render', currentBoard.board);
   
   let board = document.getElementById("board")
+  while (board.hasChildNodes()) {
+    board.removeChild(board.lastChild);
+  }
   for (let y = 0; y < currentBoard.settings.height; y++) {
     let tr = document.createElement('tr');
     tr.setAttribute('id', y)
