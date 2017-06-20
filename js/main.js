@@ -39,6 +39,33 @@ function newGame () {
 
 gameSizeClick('small');
 newGame();
+
+  var result = [];
+  var result2 = [];
+function test () {
+
+  var test1 = new Promise((resolve, reject) => {
+    resolve(10);
+  })
+  .then(result.push.bind(result2))
+}
+
+
+var random1 = {
+  lol: 'penis'
+}
+random1.call1 = (f) => {f();}
+
+var foo = {
+  lol: 'nope'
+};
+
+foo.add = () => {
+  console.log(this);
+}
+
+random1.call1(foo.add);
+
 //generate a board
 //square options
   //bomb
