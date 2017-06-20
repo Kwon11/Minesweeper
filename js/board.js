@@ -64,7 +64,6 @@ function randomCoordinates() {
 }
 
 function renderBoard () {
-  console.log('render', currentBoard.board);
   
   let board = document.getElementById("board")
   while (board.hasChildNodes()) {
